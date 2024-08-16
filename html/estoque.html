@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Atual</title>
+    <link rel="stylesheet" href="/css/estoque.css">
+</head>
+
+<body>
+    <div class="return">
+        <a href="/index.html"><button>Voltar</button></a>
+    </div>
+</body>
+<body>
+    <header>
+        <h1>ESTOQUE</h1>
+    </header>
+    
+    <div class="container">
+        <table id="stock-table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Valor unitário</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <h2>Gráfico de Estoque</h2>
+        <canvas id="stock-chart" width="400px" height="100px" style="display: block; box-sizing: border-box; height: 700px; width: 700px;"></canvas>
+
+        
+    </div>
+
+    <div class="estoque">
+        <button id="export-excel">Exportar para Excel</button>
+        <button id="clear-stock">Limpar Estoque</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="/estoque.js"></script>
+</body>
+</html>
+
