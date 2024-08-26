@@ -26,11 +26,36 @@
                     <th>Quantidade</th>
                     <th>Valor unitário</th>
                     <th>Valor Total</th>
+                    <th>Excluir produto</th>
+                    <th>Editar produto</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="stock-table-body">
+                <!-- As linhas da tabela serão inseridas aqui -->
             </tbody>
-        </table>
+
+    <!-- Formulário de Edição (inicialmente oculto) -->
+    <div id="edit-form-container" style="display: none; margin: top; position: relative; top: -35px;">
+        <h3>Editar Produto</h3>
+        <form id="edit-form">
+            <label for="edit-codigo">Código:</label>
+            <input type="text" id="edit-codigo" readonly>
+
+            <label for="edit-nome">Nome:</label>
+            <input type="text" id="edit-nome">
+
+            <label for="edit-quantidade">Quantidade:</label>
+            <input type="number" id="edit-quantidade">
+
+            <label for="edit-valor-unitario">Valor Unitário:</label>
+            <input type="number" step="0.01" id="edit-valor-unitario">
+
+            <button type="submit">Salvar</button>
+            <button type="button" id="cancel-edit">Cancelar</button>
+        </form>
+    </div>
+
+    </table>
 
         <h2>Gráfico de Estoque</h2>
         <canvas id="stock-chart" width="400px" height="100px" style="display: block; box-sizing: border-box; height: 700px; width: 700px;"></canvas>

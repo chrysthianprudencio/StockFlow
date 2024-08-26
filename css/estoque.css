@@ -84,6 +84,20 @@ button:hover {
     background-color: #471AFF;
 }
 
+.delete-button {
+    padding: 5px 10px;
+    background-color: #ff4c4c;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #ff0000;
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
 
 header {

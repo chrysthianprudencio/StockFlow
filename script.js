@@ -86,6 +86,67 @@ document.addEventListener("DOMContentLoaded", function() {
             row.insertCell(2).textContent = product.quantidade;
             row.insertCell(3).textContent = product.valorUnitario.toFixed(2);
             row.insertCell(4).textContent = product.valorTotal.toFixed(2);
+
+        // Adiciona o botão de editar
+        const actionsCell = row.insertCell(5);
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Editar';
+        editButton.addEventListener('click', () => showEditForm(codigo));
+        actionsCell.appendChild(editButton);
+
+        // Criar botão de exclusão
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Excluir';
+        deleteButton.classList.add('delete-button');
+        deleteButton.addEventListener('click', function() {
+            deleteProduct(codigo);
+        });
+
+        const actionCell = row.insertCell(5);
+        actionCell.appendChild(deleteButton);    
+
+        }
+    }
+
+    function showEditForm(codigo) {
+        const product = products[codigo];
+        document.getElementById('edit-codigo').value = codigo;
+        document.getElementById('edit-nome').value = product.nome;
+        document.getElementById('edit-quantidade').value = product.quantidade;
+        document.getElementById('edit-valor-unitario').value = product.valorUnitario;
+        document.getElementById('edit-form-container').style.display = 'block';
+    }
+    
+    function hideEditForm() {
+        document.getElementById('edit-form-container').style.display = 'none';
+    }
+    
+    document.getElementById('edit-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const codigo = document.getElementById('edit-codigo').value;
+        const nome = document.getElementById('edit-nome').value;
+        const quantidade = parseInt(document.getElementById('edit-quantidade').value);
+        const valorUnitario = parseFloat(document.getElementById('edit-valor-unitario').value);
+        const valorTotal = quantidade * valorUnitario;
+    
+        products[codigo] = { nome, quantidade, valorUnitario, valorTotal };
+        localStorage.setItem('products', JSON.stringify(products));
+        updateStockTable();
+        updateStockChart();
+        hideEditForm();
+    });
+    
+    document.getElementById('cancel-edit').addEventListener('click', hideEditForm);
+
+
+    // Deleta produtos
+    function deleteProduct(codigo) {
+        if (confirm('Tem certeza que deseja excluir este item?')) {
+            delete products[codigo]; // Remove o produto do objeto
+            localStorage.setItem('products', JSON.stringify(products)); // Atualiza o localStorage
+            updateStockTable(); // Atualiza a tabela
+            updateStockChart(); // Atualiza o gráfico
+            alert('Produto excluído com sucesso!');
         }
     }
 
