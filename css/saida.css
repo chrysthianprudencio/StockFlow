@@ -51,7 +51,7 @@ input, select {
 }
 
 button {
-    padding: 10px;
+    padding: 5px 10px;
     background-color: #509AF0;
     border: none;
     border-radius: 5px;
@@ -76,62 +76,3 @@ button:hover {
     cursor: pointer;
 
 }
-
-@media (min-width: 481px) and (max-width: 768px) {
-
-body {
-    
-    padding: 10px;
-}
-    
-header {
-           
-    margin-bottom: 15px;
-    top: -100px; /* Ajuste para reposicionar o header */
-}
-    
-h1 {
-    
-    font-size: 1.8rem; /* Ajuste no tamanho da fonte */
-    padding: 0;
-    position: relative;
-    top: -70px;
-}
-    
-.container {
-    width: 85%; /* Ajuste na largura do container */
-    padding: 15px; /* Ajuste no padding */
-    max-width: 600px; /* Ajuste no max-width para acomodar os campos de forma mais compacta */
-    
-}
-    
-form {
-    
-    gap: 15px; /* Redução do espaçamento entre os elementos do formulário */
-    justify-content: center; /* Centralizar os elementos no formulário */
-    
-}
-    
-label {
-    
-    flex: 1 1 120px; /* Ajuste na largura mínima dos labels */
-}
-    
-input, select {
-            
-    flex: 2 1 180px; /* Ajuste na largura mínima dos inputs e selects */
-}
-    
-button {
-    
-    font-size: 1.1rem; /* Ajuste no tamanho da fonte do botão */
-    padding: 8px; /* Ajuste no padding do botão */
-}
-    
-.return {
-    
-    font-size: 1.5rem; /* Ajuste no tamanho da fonte do botão de retorno */
-}
-    
-}
-    

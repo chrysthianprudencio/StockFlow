@@ -49,7 +49,7 @@ input {
 }
 
 button {
-    padding: 10px;
+    padding: 5px 10px;
     background-color: #509AF0;
     border: none;
     border-radius: 5px;
@@ -74,46 +74,4 @@ button:hover {
     cursor: pointer;
 
 }
-
-@media (min-width: 481px) and (max-width: 768px) {
-    
-body {
-        
-    padding: 10px;
-}
-
-header {
-    
-    margin-bottom: 15px;
-    top: -100px; /* Ajuste para reposicionar o header */
-}
-
-h1 {
-    
-    font-size: 1.8rem;
-    position: relative;
-    bottom: 120px;
-}
-
-.container {
-    
-    width: 85%; /* Ajuste na largura do container */
-    padding: 15px; /* Ajuste no padding */
-    position: absolute;
-    bottom: 240px;
-}
-
-button {
-    
-    font-size: 1.1rem;
-    padding: 8px;
-}
-
-.return {
-
-    font-size: 1.5rem; /* Ajuste no tamanho da fonte do botão de retorno */
-}
-
-}
-
 

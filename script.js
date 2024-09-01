@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!products[codigo]) {
                 products[codigo] = { nome: nome, quantidade: 0, valorTotal: 0, valorUnitario: 0 };
                 alert('Produto cadastrado com sucesso!');
+                alert('Agora faça a entrada de produtos!');
             } else {
                 alert('Código do produto já cadastrado!');
             }
