@@ -76,3 +76,47 @@ button:hover {
     cursor: pointer;
 
 }
+
+/* Media Queries para dispositivos entre 320px e 480px */
+@media (min-width: 320px) and (max-width: 480px) {
+    header {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 1.6rem; /* Reduz o tamanho da fonte do título */
+        top: 35px; /* Ajusta a posição para telas menores */
+    }
+
+    .container {
+        padding: 15px;
+        width: 85%; /* Garante que o container ocupe toda a largura disponível */
+        max-width: 100%; /* Remove o max-width para permitir que o container se ajuste */
+        position: relative;
+        top: 90px;
+    }
+
+    form {
+        flex-direction: column; /* Coloca todos os elementos do formulário em uma coluna */
+        gap: 15px; /* Reduz o espaçamento entre os elementos */
+    }
+
+    label, input, select {
+        flex: 1 1 100%; /* Faz com que cada elemento ocupe toda a largura disponível */
+    }
+
+    input, select {
+        padding: 8px; /* Reduz o padding dos inputs e selects */
+    }
+
+    button {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+        padding: 5px 10px; /* Aumenta o padding do botão para uma área de toque maior */
+    }
+
+    .return {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte do botão "Voltar" */
+        padding: 8px 15px; /* Reduz o padding para melhor ajuste em telas menores */
+    }
+}
