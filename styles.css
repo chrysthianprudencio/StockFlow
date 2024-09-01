@@ -157,23 +157,24 @@ main h2 {
     }
 
     header h1 {
-        font-size: 1.7em;
+        font-size: 2.0em;
         position: relative;
         top: 20px;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 50px;
+        font-size: 1.2em !important; 
+        gap: 80px;
         position: relative;
-        top: 70px;
+        top: 80px;
         left: 0px;
     }
 
     main h2 {
         font-size: 1.5em;
         position: relative;
-        top: 30px;
+        top: 15px;
     }
 
     .illustration {
