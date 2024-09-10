@@ -106,6 +106,17 @@ button:hover {
         letter-spacing: 0.5px;
     }
 
+    header {
+        position: relative;
+        top: 50px;
+    }
+
+    /* Gráfico de estoque */
+    .container {
+        position: relative;
+        top: 50px;
+    }
+
     /* Estilo da Tabela em Modo Vertical */
     table {
         display: block;
@@ -139,16 +150,25 @@ button:hover {
 
     h2 {
         font-size: 1.2em;
+        position: relative;
+        top: 20px;
     }
 
     canvas {
         max-width: 100%;
         height: auto;
+        position: relative;
+        top: 30px;
     }
 
     button {
         padding: 6px 10px;
         font-size: 0.8rem;
+    }
+
+    .return {
+        position: relative;
+        top: 20px;
     }
 
      /* Formulário de Edição */

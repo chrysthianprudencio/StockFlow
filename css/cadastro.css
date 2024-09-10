@@ -83,6 +83,8 @@ button:hover {
 
     h1 {
         font-size: 1.6rem; /* Reduz o tamanho da fonte do título */
+        position: relative;
+        top: 40px;
     }
 
     .container {
@@ -106,5 +108,6 @@ button:hover {
     .return {
         font-size: 1.5rem; /* Ajusta o tamanho da fonte do botão "Voltar" */
         padding: 8px 15px; /* Reduz o padding para melhor ajuste em telas menores */
+        top: 20px
     }
 }
